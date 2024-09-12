@@ -1,38 +1,237 @@
-.App {
-  text-align: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(10,0,36);
+background: linear-gradient(90deg, rgba(10,0,36,1) 0%, rgba(121,9,76,1) 71%, rgba(121,0,255,1) 100%);
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* , p, h1, h3,h4,h2
+{
+  font-family: "Nerko One", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+}
+.product-item {
+   width: 300px;
+   text-align: center;
+   margin: 0 auto;
+   font-family: "Open Sans";
+   transition: .3s ease-in;
+   margin-top: 5rem;
+}
+.product-item:hover {
+   border-bottom: 2px solid #170396;
+}
+.product-item img {
+   display: block;
+   width: 100%;
+   border-top-left-radius: 1.5rem;
+   border-top-right-radius: 1.5rem;
+}
+.product-list {
+   background: #4f0b45;
+   padding: 15px 0;
+}
+.product-list h3 {
+   font-size: 18px;
+   font-weight: 400;
+   color: white;
+   margin: 0 0 10px 0;
+}
+.price {
+   font-size: 16px;
+   color: #fc5a5a;
+   display: block;
+   margin-bottom: 12px;
+}
+.button {
+   text-decoration: none;
+   display: inline-block;
+   padding: 0 12px;
+   background: #4a2194;
+   color: white;
+   text-transform: uppercase;
+   font-size: 12px;
+   line-height: 28px;
+   transition: .3s ease-in;
+}
+.product-item:hover .button {
+   background: #170396;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+
+
+header {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;  
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1a1b2c;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .icon {
+    width: 4rem;
+    border-radius: 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
   }
+
+  .data {
+    color: white;
+  }
+
+  ul li {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .data h1 {
+    text-align: center;
+  }
+  .data ul {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .search input{
+    padding: 1rem;
+    width: 24rem;
+    color: black;
+    border: none;
+    border-radius: 5px;
+
+  }
+
+
+
+
+  .container {
+    padding-right: 3rem;
+    padding-left: 3rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .info {
+    display: flex;
+    margin-top: 5rem;
+    flex-wrap: wrap;
+  }
+  .info img {
+    width: 20%;
+    padding: 2rem;
+  }
+
+  .info2 {
+    margin-top: 2rem;
+    font-size: 80%;
+  }
+  
+  .info2 p{
+        max-width: 35rem;
+        
+  }
+
+  .color {
+    color: white;
+  }
+
+  .mp3 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 2rem;
+  }
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  @media (max-width: 927px) {
+      .info img {
+        width: 40%;
+        padding: 0;
+      }    
+  }
+  @media (max-width: 500px) {
+    .info img {
+      width: 55%;
+      padding: 0;
+    }    
 }
+
+
+
+/* Основные стили для select */
+.select-container {
+  width: 100%;
+  max-width: 300px; /* Установите ширину по необходимости */
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.select-container select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.select-container select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Стили для option */
+.select-container option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* Стиль для первого элемента */
+.select-container option[disabled] {
+  color: #999;
+  background-color: #e9ecef;
+  font-style: italic;
+}
+
+  
+  

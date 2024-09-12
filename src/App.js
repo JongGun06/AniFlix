@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Api from './components/Api';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Main from './components/Main';
+import Catalog from './components/Catalog';
+import Search from './components/Search';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/watch/:id' element={<Api/>}/>
+          <Route path='/day' element={<Main/>}/>
+          <Route path='/' element={<Catalog/>}/>
+          <Route path='/search' element={<Search/>}/>
+
+        </Routes>
+      </BrowserRouter>
+      
     </div>
   );
 }
